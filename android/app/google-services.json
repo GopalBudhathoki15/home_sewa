@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "169974508974",
+    "project_id": "home-sewa-43c55",
+    "storage_bucket": "home-sewa-43c55.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169974508974:android:312bcb2d7c97d10f43ac3f",
+        "android_client_info": {
+          "package_name": "com.example.home_sewa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "169974508974-6gl1n9msd02ff9ans7qt4isvbsn5ltr6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgmSshgwgeibyjlaDFq3wFDkKforWXm1A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "169974508974-6gl1n9msd02ff9ans7qt4isvbsn5ltr6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
