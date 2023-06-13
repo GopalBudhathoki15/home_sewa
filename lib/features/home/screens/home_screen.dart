@@ -34,7 +34,9 @@ class HomeScreen extends ConsumerWidget {
               ListTile(
                 leading: const Icon(Icons.logout),
                 title: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    signOut(ref);
+                  },
                   child: const Text("Log out!"),
                 ),
               )
