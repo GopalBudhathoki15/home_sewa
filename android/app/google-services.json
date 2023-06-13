@@ -14,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "169974508974-6gl1n9msd02ff9ans7qt4isvbsn5ltr6.apps.googleusercontent.com",
+          "client_id": "169974508974-j04g9kgk1h1hbbmgnailtrje4mmku3c6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.home_sewa",
+            "certificate_hash": "eccea2288b4847c2d406dcdc24ff9d670b3056ca"
+          }
+        },
+        {
+          "client_id": "169974508974-4inuv6hsaam9pl6hfe78oic1cp01i72p.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -27,8 +35,15 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "169974508974-6gl1n9msd02ff9ans7qt4isvbsn5ltr6.apps.googleusercontent.com",
+              "client_id": "169974508974-4inuv6hsaam9pl6hfe78oic1cp01i72p.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "169974508974-usd0rpgjtckpm5erlikt0n3ohk860if4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.homeSewa"
+              }
             }
           ]
         }

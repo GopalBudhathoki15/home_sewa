@@ -1,33 +1,52 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:home_sewa/auth/screens/login_screen.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:home_sewa/core/common/error_text.dart';
+import 'package:home_sewa/core/common/loader.dart';
+import 'package:home_sewa/features/auth/controller/auth_controller.dart';
+import 'package:home_sewa/features/auth/screens/login_screen.dart';
+import 'package:home_sewa/features/home/screens/home_screen.dart';
+import 'package:home_sewa/firebase_options.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(const ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginScreen(),
+      home: ref.watch(authStateChangeProvider).when(
+            data: (data) {
+              if (data != null) {
+                return const HomeScreen();
+              } else {
+                return const LoginScreen();
+              }
+            },
+            error: (err, stackTrace) => ErrorText(error: err.toString()),
+            loading: () => const Loader(),
+          ),
     );
   }
 }
 
-
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
-  
   final String title;
 
   @override
